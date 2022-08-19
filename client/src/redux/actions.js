@@ -7,11 +7,9 @@ export const GET_TYPES = 'GET_TYPES'
 export const GET_SOME = 'GET_SOME'
 export const CLEAR = 'CLEAR'
 
-export const pokeUrl = 'http://localhost:3001/pokemons'
-export const nameUrl = 'http://localhost:3001/pokemons?name='//+name
-export const typesUrl = 'http://localhost:3001/types'
-
-export const decamark = "https://archives.bulbagarden.net/media/upload/8/8e/Spr_3r_000.png"
+export const pokeUrl = '/pokemons'
+export const nameUrl = '/pokemons?name='//+name
+export const typesUrl = '/types'
 
 export const getAll = () =>{
     return async (dispatch)=>{

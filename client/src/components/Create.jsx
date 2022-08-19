@@ -2,13 +2,16 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import Nav from './Nav'
 import axios from 'axios'
-import { decamark, pokeUrl } from '../redux/actions'
+import { pokeUrl } from '../redux/actions'
+import decamark from '../media/Spr_3r_000.png'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
+import img from '../media/cute-pokemon-wallpaper-gamersrd.jpg'
+
 
 function Create() {
   const CreaDiv = styled.div`
-    background-image: url('https://gamersrd.com/wp-content/uploads/2016/09/cute-pokemon-wallpaper-gamersrd.jpg');
+    background-image: url(${img});
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

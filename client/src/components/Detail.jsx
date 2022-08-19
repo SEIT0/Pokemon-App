@@ -1,18 +1,22 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import { clearDetail, decamark, getDetail } from '../redux/actions'
+import { clearDetail, getDetail } from '../redux/actions'
+import decamark from '../media/Spr_3r_000.png'
 import Nav from './Nav'
+import errorImg from '../media/DEUt.gif'
+import loadImg from '../media/loading.45600eb9.gif'
 
 const DivErr = styled.div`
-  background-image: url('https://i.gifer.com/DEUt.gif');
+  background-image: url(${errorImg});
   height: 100vh;
   background-repeat: no-repeat;
   background-position: 0px -17rem;
   background-size: cover;
-
   font-size: 3rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 `
 
 const Divtail = styled.div`
@@ -44,11 +48,12 @@ function Detail() {
       <h5>{`weight (in hgr): ${weight}`}</h5>
     </Divtail>
     : pokeDetail === 'F' ? (<DivErr>
-    <span>Pokemon not found</span>
+    <span>Pokemon not found</span> <br />
+    <Link to='/home'>Return home</Link>
     </DivErr>)
     : (<>
       <h1>Loading...</h1>
-      <img src="https://weichiachang.github.io/pokemon-master/img/loading.45600eb9.gif" alt="" />
+      <img src={loadImg} alt="" />
       </>)
     }
     </>

@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 
-const trainer_red = 'https://fondosmil.com/fondo/14729.jpg'
+import trainer_red from '../media/14729.jpg'
 
 const LanDiv = styled.div`
   background-image: url(${trainer_red});

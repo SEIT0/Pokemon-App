@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { decamark } from '../redux/actions';
+import decamark from '../media/Spr_3r_000.png'
 
 function Card(p) {
 

@@ -24,8 +24,8 @@ const {Type, Pokemon} = require('./src/db.js')
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(3001, async () => {
-    console.log('is listening at 3001'); // eslint-disable-line no-console
+  server.listen(process.env.PORT, async () => {
+    console.log('is listening at '+process.env.PORT); // eslint-disable-line no-console
     await axios.get('https://pokeapi.co/api/v2/type').then(r => {
         r.data.results.forEach(async (e) => {
             await Type.findOrCreate({where: {name: e.name} })

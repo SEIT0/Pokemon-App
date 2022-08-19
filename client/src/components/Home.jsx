@@ -4,6 +4,7 @@ import Nav from './Nav'
 import {useDispatch, useSelector} from 'react-redux'
 import { getAll, getSome, getTypes } from '../redux/actions'
 import styled from 'styled-components'
+import img from '../media/loading.45600eb9.gif'
 
 const Hdiv = styled.div`
   background-color: lightgray;
@@ -115,7 +116,7 @@ function Home() {
     </Hdiv>
     : (<>
     <h1>Loading...</h1>
-    <img src="https://weichiachang.github.io/pokemon-master/img/loading.45600eb9.gif" alt="" />
+    <img src={img} alt="" />
     </>)
 }</>)
 }
