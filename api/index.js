@@ -31,7 +31,5 @@ conn.sync({ force: true }).then(() => {
             await Type.findOrCreate({where: {name: e.name} })
         })
     })
-    const te = await Pokemon.create({name: 'test', front_default:'', stats: [{stat: {name:'ola'}, base_stat:'como tas'}]})
-    await te.addTypes([1,2])
   });
 });
